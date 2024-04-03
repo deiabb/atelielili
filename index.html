@@ -5,69 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./estilos/reset.css">
     <link rel="stylesheet" href="./estilos/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Just+Me+Again+Down+Here&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/627fbaa77a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://db.onlinewebfonts.com/c/384a6031928e262848e4e7ef80037466?family=Kudryashev+Display+Sans" rel="stylesheet"> 
+    <link href="https://db.onlinewebfonts.com/c/316ee285f7fbbf7d9b6781e4daa2a02c?family=Halimun" rel="stylesheet">  
     <title>Ateliê Lili</title>
 </head>
-<body>
-    <header id="home" class="cabecalho">
-        <section class="cabecalho__topo">
-            <h1 class="cabecalho__titulo">Ateliê Lili</h1>
-    
-            <nav class="cabecalho__menu">
-                <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="bichinhos.html">Bichinhos</a>
-                    </li>
-                    <li>
-                        <a href="geeks.html">Geeks</a>
-                    </li>
-                    <li>
-                        <a href="diversos.html">Diversos</a>
-                    </li>
+<body class="corpo">
+    <header id="home">
+        <section class="cabecalho__topo"> 
+            <nav class="navbar navbar-expand-lg fixed-top text-center">
+                <div class="navbar_logo">
+                    <img src="./icones/logo-pq.png" width="50" height="50" class="rounded ml-4 mr-2" alt="">
+                    <h2 class="font-brand">Ateliê Lili</h2>
+                </div>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#corpo">Home</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="./bichinhos.html">Bichinhos</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="./geeks.html">Geeks</a></li>
+                    <li class="nav-item"><a class="nav-link " href="./diversos.html">Diversos</a></li>
                 </ul>
+                <p class="font-arte ml-4 mb-0">artesanato feito com amor </p>
+                <i class="fas fa-heart"></i>
+        
             </nav>
         </section>
-        <div class="cabecalho__banner">   
-        </div>
+        
+            <div id="carouselExampleControls" class="carousel slide mt-5" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100"  src="./imagens/banner2.png" alt="Primeiro Slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="./imagens/carrosel.png" alt="Segundo Slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="./imagens/carrosel2.png" alt="Terceiro Slide">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Próximo</span>
+                </a>
+              </div>
+        
+            <!-- <div class="cabecalho__banner">   
+            </div> -->
     </header>
+    
     <main class="destaques">
+        
         <h2>Destaques</h2>
-        <a href="harrypotter.html"><img src="./imagens/HP1.jpeg" alt=""></a>
-        <a href="hermione.html"><img src="./imagens/Mione1.jpeg" alt=""></a>
-        <a href="ron.html"><img src="./imagens/Ron1.jpeg" alt=""></a>
+        <a href="harrypotter.html"><img class="rounded" src="./imagens/HP1.jpeg" alt=""></a>
+        <a href="hermione.html"><img class="rounded" src="./imagens/Mione1.jpeg" alt=""></a>
+        <a href="ron.html"><img class="rounded" src="./imagens/Ron1.jpeg" alt=""></a>
     </main>
-    <section class="localização">
+    <section class="localizacao">
         <h3>Onde estamos</h3>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29501.74143605903!2d-42.999532831095!3d-22.439649521700066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99b31de9ab2385%3A0xf996683665c7723b!2sFeirarte%20Teres%C3%B3polis!5e0!3m2!1spt-BR!2sbr!4v1709133673543!5m2!1spt-BR!2sbr" width="900" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29501.74143605903!2d-42.999532831095!3d-22.439649521700066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99b31de9ab2385%3A0xf996683665c7723b!2sFeirarte%20Teres%C3%B3polis!5e0!3m2!1spt-BR!2sbr!4v1709133673543!5m2!1spt-BR!2sbr" width="900px" height="320px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
-<!--Destaques 3 a 5 na tela inicial
-Fazer uma animação com o banner para ele sumir quando for para os destaques
-Pedir ao prof pra me passar essa animação.-->
-    <footer class="rodape">
-        <div class="rodape__sobre">
-            <h5>Ateliê Lili</h5>
-            <ul>
-                <li><a href="sobre.html">Sobre nós</a></li>
-                <li><a href=""></a>Contato</li>
-            </ul>
-        </div>
-        <div class="pagamento">
-            <p>Métodos de pagamento aceitos</p>
-            <img class="icn" src="./icones/pix-icone.png" alt="">
-            <img class="icn" src="./icones/boleto-icone.png" alt="">
-            <img class="icn" src="./icones/mercado-pago-icone.png" alt="">
-        </div>
-        <div class="redes">
-            <p>Redes Sociais</p>
-            <a href=""><img class="icn" src="./icones/facebook.png" alt=""></a>
-            <a href=""><img class="icn" src="./icones/instagram(1).png" alt=""></a>
-        </div>
-    </footer>
-</body>
+   
 
+<footer class="rodape d-lg-flex text-center justify-content-around pt-5 pb-5 pr-4">
+    <div class="rodape__sobre d-flex flex-column flex-wrap justify-content-center">
+        <img class="mr-2" src="./imagens/logo.png" width="180px" height="180px" alt="">
+        
+        <p class="mb-1"><a href="sobre.html">Sobre nós</a></p>
+        <p><a href="">Contato</a></p>
+    </div>
+    <div class="pagamento">
+        <p>Métodos de pagamento aceitos</p>
+        <img class="icn" src="./icones/pix-icone.png" alt="">
+        <img class="icn" src="./icones/boleto-icone.png" alt="">
+        <img class="icn" width="80px" src="./icones/mercado-pago-icone.png" alt="">
+    </div>
+    <div class="redes">
+        <p>Redes Sociais</p>
+        <a href=""><i class="fab fa-facebook-square" style="color: #4c109b; font-size: 60px;"></i></a>
+        <a href=""><i class="fab fa-instagram" style="font-size: 60px; color: #4c109b;"></i></a>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
 </html>

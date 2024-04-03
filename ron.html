@@ -1,73 +1,91 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./estilos/reset.css">
-    <link rel="stylesheet" href="./estilos/style.css">
-    <link rel="stylesheet" href="./estilos/paginas.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Just+Me+Again+Down+Here&display=swap" rel="stylesheet">
-    <title>Boneco Ron Waesley</title>
+    
+    <script src="https://kit.fontawesome.com/627fbaa77a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://db.onlinewebfonts.com/c/384a6031928e262848e4e7ef80037466?family=Kudryashev+Display+Sans" rel="stylesheet"> 
+    <link href="https://db.onlinewebfonts.com/c/316ee285f7fbbf7d9b6781e4daa2a02c?family=Halimun" rel="stylesheet"> 
+    <link rel="stylesheet" href="./estilos/compra.css">
+    
+    <title>Boneco Ron Weasley</title>
 </head>
 <body>
-    <header class="cabecalho-pags">
-        <h1 class="cabecalho__titulo">Ateliê Lili</h1>
-        <nav class="cabecalho__menu">
-            <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="bichinhos.html">Bichinhos</a>
-                </li>
-                <li>
-                    <a href="geeks.html">Geeks</a>
-                </li>
-                <li>
-                    <a href="diversos.html">Diversos</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="foto-produto">
-            <img class="principal" src="./imagens/Ron1.jpeg" alt="">
-            <a href=""><img class="detalhe" src="./imagens/Ron2.jpeg" alt=""></a>
-            <a href=""><img class="detalhe" src="./imagens/Ron3.jpeg" alt=""></a>
-            <a href=""><img class="detalhe" src="./imagens/Ron4.jpeg" alt=""></a>
+    <!-- Imagem e texto -->
+    <nav class="navbar navbar-expand-lg fixed-top text-center">
+        <div class="navbar_logo">
+            <img src="./icones/logo-pq.png" width="50" height="50" class="rounded ml-4 mr-2" alt="">
+            <h2 class="font-brand">Ateliê Lili</h2>
         </div>
-        <div class="compra-produto">
-            <h2>Boneco Ron Weasley</h2>
-            <h3>R$ 86,00</h3>
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="./index.html">Home</a></li>
+            <li class="nav-item">
+                <a class="nav-link " href="./bichinhos.html">Bichinhos</a></li>
+            <li class="nav-item">
+                <a class="nav-link " href="./geeks.html">Geeks</a></li>
+            <li class="nav-item"><a class="nav-link " href="./diversos.html">Diversos</a></li>
+        </ul>
+        <p class="font-arte ml-4 mb-0">artesanato feito com amor </p>
+        <i class="fas fa-heart"></i>
 
-            <button> <img width="25px" src="./icones/whatsapp.png" alt=""><a href="https://web.whatsapp.com/">Comprar Whatsapp</a></button>
+    </nav>
+    <main class="compra d-lg-flex flex-wrap justify-content-center align-itens-between shadow p-3">
+        <section class="compra__fotos  flex-wrap justify-content-around ">
+            <img class="detalhe rounded shadow-sm" src="./imagens/Ron2.jpeg" alt="">
+            <img class="detalhe rounded shadow-sm" src="./imagens/Ron3.jpeg" alt="">
+            <img class="detalhe rounded shadow-sm" src="./imagens/Ron4.jpeg" alt="">
             
-        </div>
-        <div class="descricao-produto">
+            <img class="principal rounded shadow" src="./imagens/Ron1.jpeg" alt="">
+        </section>
+        <section class="compra__preco">
+            <h4>Boneco Ron Weasley</h4> 
+            <p>R$ 86,00</p>
+            <p>DIMENSÕES DO AMIGURUMI </p>
 
-        </div>
+                <p>Comprimento: 7 cm</p>
+                
+                <p>Largura: 9 cm</p>
+                
+                <p>Altura: 19 cm</p>
+                
+                
+            <button class="compra_whats btn btn-success"><i class="fab fa-whatsapp" style=" font-size: 30px; font-weight: 700; margin-right: 10px;"></i>Comprar</button>
+        </section>
+        <section class="descricao">
+            <h4>Descrição</h4>
+            <p>Confeccionado com Linha 100% Algodão</p>
+
+                <p>Enchimento com Fibra Siliconada Anti-Alérgica</p>
+                
+                <p>Olhos com Travas de Segurança</p>
+                
+                <p>Por ser Feito à Mão os Produtos podem apresentar leve Variação nas Dimensões.</p>
+            </p>
+        </section>
     </main>
-    <footer class="rodape">
-        <div class="rodape__sobre">
-            <h5>Ateliê Lili</h5>
-            <ul>
-                <li><a href="sobre.html">Sobre nós</a></li>
-                <li><a href=""></a>Contato</li>
-            </ul>
+    <footer class="rodape d-lg-flex text-center justify-content-around pt-5 pb-5 pr-4">
+        <div class="rodape__sobre d-flex flex-column flex-wrap justify-content-center">
+            <img class="mr-2" src="./imagens/logo.png" width="180px" height="180px" alt="">
+            
+            <p class="mb-1"><a href="sobre.html">Sobre nós</a></p>
+            <p><a href="">Contato</a></p>
         </div>
         <div class="pagamento">
             <p>Métodos de pagamento aceitos</p>
             <img class="icn" src="./icones/pix-icone.png" alt="">
             <img class="icn" src="./icones/boleto-icone.png" alt="">
-            <img class="icn" src="./icones/mercado-pago-icone.png" alt="">
+            <img class="icn" width="80px" src="./icones/mercado-pago-icone.png" alt="">
         </div>
         <div class="redes">
             <p>Redes Sociais</p>
-            <a href=""><img class="icn" src="./icones/facebook.png" alt=""></a>
-            <a href=""><img class="icn" src="./icones/instagram(1).png" alt=""></a>
+            <a href=""><i class="fab fa-facebook-square" style="color: #4c109b; font-size: 60px;"></i></a>
+            <a href=""><i class="fab fa-instagram" style="font-size: 60px; color: #4c109b;"></i></a>
         </div>
     </footer>
+
+
 </body>
 </html>

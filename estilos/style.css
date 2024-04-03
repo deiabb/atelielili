@@ -1,134 +1,170 @@
-
 body {
-    background-color: #FFFDF5 ;
+    background-image: linear-gradient(40deg, rgba(253, 108, 229, 0.319), rgb(255, 255, 255),   rgba(197, 57, 253, 0.174),rgba(0, 170, 255, 0.371));
     font-family: "Inter", sans-serif;
+}
+
+.corpo {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 20% 35% 35% 10%;
+    grid-template-areas: 
+    "topo"
+    "meio"
+    "loca"
+    "fim"
+    ;
 }
 
 .cabecalho {
-    height: 754px;
+    grid-area: topo;
 }
 
-.cabecalho-pags {
-    height: 210px;
-    background-image: url(../imagens/banner-telas.png);
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
-}
-
-.cabecalho__topo {
-    height: 244px;
-    background-color: #D2BBFA;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
-}
-
-.cabecalho__titulo {
-    font-size: 54px;
-    margin-bottom: 45px;
-    margin-right: 950px;
-    color: #361773;
-    font-family: 'Just Me Again Down Here', cursive;
-}
-.cabecalho__banner {
-    height: 510px;
-    background-image: url(../imagens/banner2.png);
-}
-
-.cabecalho__menu {
-    font-family: "Inter", sans-serif;
+/* .cabecalho__topo {
+    display: grid;
     background-color: #FDF4D6;
-    width: 920px;
-    height: 79px;
-    color: #716E6E;
-    border-radius: 40px;   
+    grid-template-columns: 25% 60%;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    padding: 2.5px;
+   
+} */
+
+.cabecalho__logo {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center; 
-    justify-content: space-around;
+    width: 500px;
 }
 
-.cabecalho__menu li {
-    display: inline;
-    margin-right: 40px;
+.cabecalho__titulo { 
+    font-size: 40px;
+    padding-left: 50px;
+    padding-right: 40px;
+    color: #361773;
+    font-family: "Kudryashev Display Sans";
+    font-weight: 700;
 }
-   
-.cabecalho__menu a {
-    text-decoration: none;
+.cabecalho__sub {
+    font-family: "Halimun"; 
+    color: #361773;
+    font-size: 20px;
+}
+
+.navbar_logo {
+    display: flex;
+    width: 200px;
+    align-items: center;
+    margin-right: 90px;
+}
+.font-brand {
+    font-family: "Kudryashev Display Sans";
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 0;
+}
+
+.navbar {
+    background-color: #FDF4D6;
 }
 
 a:link {
     color: #716E6E;
+    
 }
 a:visited {
     color: #716E6E;
 }
-a:hover {
-    color: #000000
+a.nav-link:hover {
+    color: #000000;
+    text-decoration: underline;
 }
 
-.destaques{
+.font-arte {
+    font-family: "Halimun"; 
+}
+
+.nav-link {
+    font-size: 18px;
+}
+
+
+
+
+.cabecalho__banner {
+    margin-top: 60px;
+    margin-bottom: 25px;
+    height: 510px;
+    background-image: url(../imagens/banner2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #8C9BFA;
+    z-index: 1;
+}
+
+.destaques {
     height: 450px;
     margin: 15px 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    grid-area: meio;
+}
+
+.destaques h2 {
+    width: 100%;
+    font-size: 25px;
+    text-align: center;
+    
 }
 
 .destaques img {
     width: 262.5px;
     height: 350px;
     margin: 15px 50px;
+    padding: 15px 20px;
+    border: 0.5px solid rgb(133, 128, 128); 
+    background-color: rgb(255, 255, 255);
+}
+
+.destaques img:hover {
+    box-shadow: 5px 5px 5px 5px #888888;
 }
 
 .localizacao {
-    height: 450px;
-    margin: 15px 0;
+    height: 460px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    grid-area: loca;
+}
+
+.localizacao h3 {
+    font-size: 20px;
+    text-align: center;
+    padding: 30px 0;
 }
 
 .rodape {
-    padding: 20px ;
+    grid-area: "rodape";
     background-color: #D2BBFA;
-    height: 236px;
-    display: flex;
-    justify-content: space-between;
+    height: 250px;
+    grid-area: fim;
 }
 
-
-.rodape__sobre {
-    margin-left: 20px;
-    width: 150px;
-    display: flex;
-    flex-direction: column;
-}
-h5 {
-    font-family: 'Just Me Again Down Here', cursive;
-    font-size: 30px;
-    margin-bottom: 15px;
-    font-weight: 500;
-}
-.rodape__sobre li {
-    margin-bottom: 10px;
+.rodape__sobre a:hover {
+    text-decoration: none;
+    color: #000000;
 }
 
-
-.pagamento {
-    margin-top: 8px ;
-    width: 250px;
+.rodape__sobre a {
+    font-weight: 600;
 }
+
 .pagamento p {
     height: 40px;
-    font-weight: 500;
-}
-
-
-.icn {
-    height: 36px;
-    margin-right: 10px;
+    font-weight: 600;
 }
 
 .redes {
@@ -138,6 +174,7 @@ h5 {
 }
 .redes p {
     margin-bottom: 10px;
+    font-weight: 600;
 }
 
 
