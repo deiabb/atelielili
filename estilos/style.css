@@ -3,20 +3,52 @@ body {
     font-family: "Inter", sans-serif;
 }
 
-.corpo {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 20% 35% 35% 10%;
-    grid-template-areas: 
-    "topo"
-    "meio"
-    "loca"
-    "fim"
-    ;
+.cabecalho__index {
+    grid-area: topo-index;
+}
+.destaques__index {
+    grid-area: meio-index ;
+}
+.localizacao__index {
+    grid-area: loca-index;
+}
+.rodape__index {
+    grid-area: fim-index;
 }
 
-.cabecalho {
-    grid-area: topo;
+.corpo__index {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 30% 25% auto 10%;
+    grid-template-areas: 
+    "topo-index"
+    "meio-index"
+    "loca-index"
+    "fim-index"
+    ;
+    row-gap: 1.25rem;
+}
+
+.contato__corpo {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 10vh 75vh 30vh;
+    grid-template-areas: 
+    "inicio"
+    "meio"
+    "fim"
+    ;
+    row-gap: 1.25rem;
+}
+.contato__cabecalho {
+    grid-area: inicio;
+}
+.contato__principal {
+    grid-area: meio;
+    justify-content: center;
+}
+.contato__rodape {
+    grid-area: fim;
 }
 
 .cabecalho__logo {
@@ -86,12 +118,6 @@ a.nav-link:hover {
     z-index: 1;
 }
 
-.contato {
-    justify-content: center;
-    margin-top: 5rem;
-    padding-bottom: 3rem;
-}
-
 .sobre {
     margin: 5rem 0;
     padding: 3.5rem ;
@@ -113,12 +139,11 @@ a.nav-link:hover {
 
 .destaques {
     height: 450px;
-    margin: 3.25rem 0 6rem 0;
+    margin: 1.5rem 0 6rem 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    grid-area: meio;
     justify-content: center;
 }
 
@@ -161,7 +186,6 @@ a.nav-link:hover {
     flex-wrap: wrap;
     align-items: center;
     flex-direction: column;
-    grid-area: loca;
 }
 
 .localizacao h3 {
@@ -171,11 +195,9 @@ a.nav-link:hover {
 }
 
 .rodape {
-    
     grid-area: "rodape";
     background-color: #D2BBFA;
     height: 250px;
-    grid-area: fim;
 }
 
 .rodape__sobre a:hover {
