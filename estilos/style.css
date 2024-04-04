@@ -125,6 +125,7 @@ a.nav-link:hover {
 }
 .area__sobre {
     background-color: #fffaf0;
+    
 }
 
 .titulo__sobre {
@@ -224,5 +225,25 @@ a.nav-link:hover {
     font-weight: 600;
 }
 
+.sobre__corpo {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10vh 65vh 30vh;
+    grid-template-areas: 
+    "topo"
+    "meio"
+    "fim";
+    row-gap: 2rem;
+}
 
+.sobre__cabecalho {
+    grid-area: topo;
+}
+.sobre__principal {
+    grid-area: meio;
+    justify-self: center;
+}
 
+.sobre__rodape {
+    grid-area: fim;
+}
