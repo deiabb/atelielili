@@ -1,0 +1,22 @@
+/*Divisão do corpo da pag de contato*/
+.contato__corpo {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 10vh 75vh 30vh;
+    grid-template-areas: 
+    "inicio"
+    "meio"
+    "fim"
+    ;
+    row-gap: 1.25rem;
+}
+.contato__cabecalho {
+    grid-area: inicio;
+}
+.contato__principal {
+    grid-area: meio;
+    justify-content: center;
+}
+.contato__rodape {
+    grid-area: fim;
+}

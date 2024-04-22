@@ -1,0 +1,40 @@
+/*Divisão do corpo da pag sobre*/
+.sobre__corpo {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10vh 65vh 30vh;
+    grid-template-areas: 
+    "topo"
+    "meio"
+    "fim";
+    row-gap: 2rem;
+}
+
+.sobre__cabecalho {
+    grid-area: topo;
+}
+.sobre__principal {
+    grid-area: meio;
+    justify-self: center;
+}
+
+.sobre__rodape {
+    grid-area: fim;
+}
+
+.sobre {
+    margin: 5rem 0;
+    padding: 3.5rem ;
+    width: 60vw;
+}
+.area__sobre {
+    background-color: #fffaf0;  
+}
+.titulo__sobre {
+    font-family: "Kudryashev Display Sans";
+    font-size: 2rem;
+}
+.recuo {
+    text-indent: 2em;
+    text-align: justify;
+}

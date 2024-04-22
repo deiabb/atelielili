@@ -2,8 +2,11 @@ body {
     background-image: linear-gradient(40deg, rgba(253, 108, 229, 0.319), rgb(255, 255, 255),   rgba(197, 57, 253, 0.174),rgba(0, 170, 255, 0.371));
     font-family: "Inter", sans-serif;
 }
-
+/*Divisão do corpo da pag index */
 .cabecalho__index {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     grid-area: topo-index;
 }
 .destaques__index {
@@ -15,47 +18,31 @@ body {
 .rodape__index {
     grid-area: fim-index;
 }
-
 .corpo__index {
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 30% 25% auto 10%;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto ;
     grid-template-areas: 
-    "topo-index"
-    "meio-index"
-    "loca-index"
-    "fim-index"
+    "topo-index topo-index topo-index"
+    "meio-index meio-index meio-index"
+    "loca-index loca-index loca-index"
+    "fim-index fim-index fim-index"
     ;
     row-gap: 1.25rem;
 }
 
-.contato__corpo {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 10vh 75vh 30vh;
-    grid-template-areas: 
-    "inicio"
-    "meio"
-    "fim"
-    ;
-    row-gap: 1.25rem;
+.carrosel {
+    margin-top: 2.75rem;
+    
 }
-.contato__cabecalho {
-    grid-area: inicio;
-}
-.contato__principal {
-    grid-area: meio;
-    justify-content: center;
-}
-.contato__rodape {
-    grid-area: fim;
+.carrosel img {
+    width: 100vw;
 }
 
 .cabecalho__logo {
     display: flex;
     width: 500px;
 }
-
 .cabecalho__titulo { 
     font-size: 40px;
     padding-left: 50px;
@@ -64,33 +51,47 @@ body {
     font-family: "Kudryashev Display Sans";
     font-weight: 700;
 }
-.cabecalho__sub {
-    font-family: "Halimun"; 
-    color: #361773;
-    font-size: 20px;
-}
 
-.navbar_logo {
-    display: flex;
-    width: 200px;
+.menu {
+    display: grid;
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
+    background-color: #FDF4D6;
+    grid-template-areas: 
+    'logo itens frase';
+    grid-template-columns: 25% 40% 40%;
+    padding: 0.7rem;
     align-items: center;
-    margin-right: 90px;
+    
+}
+.menu_logo {
+    margin-left: 1.75rem;
+    display: flex;
+    align-items: center;
+    grid-area: logo;
+}
+.logo {
+    width: 4rem;
 }
 .font-brand {
     font-family: "Kudryashev Display Sans";
     font-weight: 700;
     font-size: 28px;
     margin-bottom: 0;
+    text-align: center;
 }
 
-.navbar {
-    background-color: #FDF4D6;
+.menu_itens {
+    margin-left: 1.75rem;
+    display: flex;
+    grid-area: itens;
 }
 
 a:link {
     color: #716E6E;
-    
 }
+
 a:visited {
     color: #716E6E;
 }
@@ -99,53 +100,32 @@ a.nav-link:hover {
     text-decoration: underline;
 }
 
-.font-arte {
-    font-family: "Halimun"; 
+.frase {
+    margin-left: 2rem;
+    margin-right: 3rem;
+    display: flex;
+    font-family: "Halimun";
+    grid-area: frase;
+    width: fit-content;
+}
+
+i#burguer {
+    display: none;
 }
 
 .nav-link {
     font-size: 18px;
 }
 
-.cabecalho__banner {
-    margin-top: 60px;
-    margin-bottom: 25px;
-    height: 510px;
-    background-image: url(../imagens/banner2.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #8C9BFA;
-    z-index: 1;
-}
-
-.sobre {
-    margin: 5rem 0;
-    padding: 3.5rem ;
-    width: 60vw;
-}
-.area__sobre {
-    background-color: #fffaf0;
-    
-}
-
-.titulo__sobre {
-    font-family: "Kudryashev Display Sans";
-    font-size: 2rem;
-}
-
-.recuo {
-    text-indent: 2em;
-    text-align: justify;
-}
 
 .destaques {
-    height: 450px;
-    margin: 1.5rem 0 6rem 0;
+    margin: 1.5rem 0 2rem 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    width: 100vw;
 }
 
 .destaques a:hover {
@@ -163,7 +143,6 @@ a.nav-link:hover {
 .destaques__foto {
     display: flex;
     justify-content: space-evenly;
-    
     width: 300px;
     border: 0.5px solid rgb(133, 128, 128); 
     background-color: rgb(255, 255, 255);
@@ -174,38 +153,52 @@ a.nav-link:hover {
     height: 350px;
     margin: 15px 50px;
     padding: 15px 20px;
-    
 }
-
 .destaques__foto:hover {
     box-shadow: 5px 5px 5px 5px #888888;
 }
 
 .localizacao {
-    height: 460px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 2rem;
+    width: 100vw;
 }
-
 .localizacao h3 {
     font-size: 24px;
     text-align: center;
     padding: 30px 0;
 }
 
+/*Rodapé */
 .rodape {
-    grid-area: "rodape";
+    display: flex;
+    justify-content: space-evenly;
     background-color: #D2BBFA;
-    height: 250px;
+    width: 100vw;
+    height: 35vh;
+    padding: 2rem;
 }
 
+.rodape__sobre {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 30vw;
+ }
+ .rodape__sobre ul {
+    margin-top: 4rem;
+ }
+
+.logo-rodape {
+    height: 20vh;
+}
 .rodape__sobre a:hover {
     text-decoration: none;
     color: #000000;
 }
-
 .rodape__sobre a {
     font-weight: 600;
 }
@@ -213,37 +206,161 @@ a.nav-link:hover {
 .pagamento p {
     height: 40px;
     font-weight: 600;
+    width: 30vw;
 }
 
 .redes {
     margin-top: 8px ;
     font-weight: 500;
     margin-right: 20px;
+    width: 20vw;
 }
 .redes p {
     margin-bottom: 10px;
     font-weight: 600;
 }
 
-.sobre__corpo {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 10vh 65vh 30vh;
-    grid-template-areas: 
-    "topo"
-    "meio"
-    "fim";
-    row-gap: 2rem;
-}
+/*Responsividade telas menores que width 1000px*/
+@media only screen and (max-width: 1024px) {
+    .menu {
+        display: grid;
+        grid-template-areas: 
+        'logo logo frase burguer'
+        'itens_menu itens_menu itens_menu itens_menu';
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto;
+    }
 
-.sobre__cabecalho {
-    grid-area: topo;
-}
-.sobre__principal {
-    grid-area: meio;
-    justify-self: center;
-}
+    .menu_logo {
+        grid-area: logo;
+    }
+    .menu_itens {
+        grid-area: itens_menu;
+    }
+    .frase {
+        grid-area: frase;
+    }
 
-.sobre__rodape {
-    grid-area: fim;
+    #nav {
+        display: none;
+    }
+    .nav-link {
+        text-align: center;
+    }
+
+    i#burguer {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        padding: 2px;
+        width: 20px;
+    }
+    i#burguer:hover {
+        background-color: #f7cbfa;
+    }
+    .rodape {
+        display: flex;
+        height: 25vh;
+        padding: 1rem;
+    }
+    .rodape__sobre {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+  }
+
+@media only screen and (max-width: 735px) {
+    .menu {
+        display: grid;
+        grid-template-areas: 
+        'logo logo burguer'
+        'itens_menu itens_menu itens_menu';
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+    }
+
+    .frase {
+        display: none;
+    }
+
+    .rodape {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #D2BBFA;
+        width: 100vw;
+        height: 70vh;
+    }
+    .rodape__sobre {
+        width: 100%;
+        align-items: center;
+        height: 30vh;
+        padding: 0.25rem;
+    }
+    .logo-rodape {
+        height: 20vh;
+        width: 40vw;
+    }
+    .rodape__sobre ul {
+        margin-top: 0;
+    }
+    .pagamento {
+        width: 100vw;
+        padding: 1rem;
+        height: 15vh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .pagamento img {
+        width: 40px;
+    }
+    .pagamento p {
+        width: 100vw;
+        margin-bottom: 0;
+    }
+    .redes {
+        width: 100vw;
+        padding: 1rem;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .redes p {
+        width: 100vw;
+    }
+    
+    
+}
+@media only screen and ( max-width: 600px) {
+    .destaques h2 {
+        margin-bottom: 1rem;
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .destaques__foto {
+        display: flex;
+        justify-content: space-evenly;
+        width: 270px;
+        border: 0.5px solid rgb(133, 128, 128); 
+        background-color: rgb(255, 255, 255);
+        margin: 30px 40px;
+    }
+    .destaques img {
+        width: 210px;
+        height: 260px;
+        margin: 15px 50px;
+        padding: 15px 20px;
+    }
+    .localizacao h3 {
+        font-size: 20px;
+    }
+    .localizacao iframe {
+        width: 80%;
+    }
 }
