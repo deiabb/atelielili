@@ -178,7 +178,7 @@ i#burguer {
     justify-content: space-evenly;
     background-color: #D2BBFA;
     width: 100vw;
-    height: 35vh;
+    height: 48vh;
     padding: 2rem;
 }
 
@@ -193,7 +193,7 @@ i#burguer {
  }
 
 .logo-rodape {
-    height: 20vh;
+    height: 30vh;
 }
 .rodape__sobre a:hover {
     text-decoration: none;
@@ -267,6 +267,7 @@ i#burguer {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        justify-content: space-evenly;
     }
   }
 
@@ -297,10 +298,12 @@ i#burguer {
         align-items: center;
         height: 30vh;
         padding: 0.25rem;
+        display: flex;
+        flex-direction: column;
     }
     .logo-rodape {
-        height: 20vh;
-        width: 40vw;
+        height: 185px;
+        width: 185px;
     }
     .rodape__sobre ul {
         margin-top: 0;

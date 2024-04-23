@@ -5,12 +5,12 @@ body {
 
 .paginas {
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 100px auto 200px;
+    grid-template-columns: auto auto auto ;
+    grid-template-rows: 100px 80% 200px;
     grid-template-areas: 
-    "topo"
-    "meio"
-    "fim";
+    "topo topo topo"
+    "meio meio meio"
+    "fim fim fim";
 }
 .cabecalho__topo {
     grid-area: topo;
@@ -20,38 +20,46 @@ body {
     grid-area:fim;
 }
 
-.cabecalho__topo {
+.menu {
     display: grid;
-    background-color: #FDF4D6;
-    grid-template-columns: 25% 60%;
     position: fixed;
-    top: 0px;
-    width: 100%;
-    padding: 2.5px;
-   
-}
-
-.navbar_logo {
-    display: flex;
-    width: 200px;
+    width: 100vw;
+    z-index: 1;
+    background-color: #FDF4D6;
+    grid-template-areas: 
+    'logo itens frase';
+    grid-template-columns: 25% 40% 40%;
+    padding: 0.7rem;
     align-items: center;
-    margin-right: 90px;
+    
+}
+.menu_logo {
+    margin-left: 1.75rem;
+    display: flex;
+    align-items: center;
+    grid-area: logo;
+}
+.logo {
+    width: 4rem;
 }
 .font-brand {
     font-family: "Kudryashev Display Sans";
     font-weight: 700;
     font-size: 28px;
     margin-bottom: 0;
+    text-align: center;
 }
 
-.navbar {
-    background-color: #FDF4D6;
+.menu_itens {
+    margin-left: 1.75rem;
+    display: flex;
+    grid-area: itens;
 }
 
 a:link {
     color: #716E6E;
-    
 }
+
 a:visited {
     color: #716E6E;
 }
@@ -60,14 +68,22 @@ a.nav-link:hover {
     text-decoration: underline;
 }
 
-.font-arte {
-    font-family: "Halimun"; 
+.frase {
+    margin-left: 2rem;
+    margin-right: 3rem;
+    display: flex;
+    font-family: "Halimun";
+    grid-area: frase;
+    width: fit-content;
+}
+
+i#burguer {
+    display: none;
 }
 
 .nav-link {
     font-size: 18px;
 }
-
 
 .titulo-sobre {
     font-family: 'Just Me Again Down Here', cursive;
@@ -86,6 +102,7 @@ a.nav-link:hover {
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 50px;
+    padding-top: 30px;
 }
 
 .produto {
@@ -96,7 +113,7 @@ a.nav-link:hover {
     height: 460px;
     width: 350px;
     padding: 20px 10px 20px 10px;
-    margin: 100px 40px 30px 40px;
+    margin: 30px 40px 30px 40px;
     border: 0.5px solid rgb(133, 128, 128); 
     background-color: #ffffffb8;
 }
@@ -140,20 +157,32 @@ a.nav-link:hover {
     width: auto;
 }
 
-
-
-.rodape {
-    grid-area: "rodape";
+ .rodape {
+    display: flex;
+    justify-content: space-evenly;
     background-color: #D2BBFA;
-    height: 250px;
-    grid-area: fim;
+    width: 100vw;
+    height: 48vh;
+    padding: 2rem;
 }
 
+.rodape__sobre {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 30vw;
+ }
+ .rodape__sobre ul {
+    margin-top: 4rem;
+ }
+
+.logo-rodape {
+    height: 30vh;
+}
 .rodape__sobre a:hover {
     text-decoration: none;
     color: #000000;
 }
-
 .rodape__sobre a {
     font-weight: 600;
 }
@@ -161,17 +190,168 @@ a.nav-link:hover {
 .pagamento p {
     height: 40px;
     font-weight: 600;
+    width: 30vw;
 }
 
 .redes {
     margin-top: 8px ;
     font-weight: 500;
     margin-right: 20px;
+    width: 20vw;
 }
 .redes p {
     margin-bottom: 10px;
     font-weight: 600;
 }
 
+@media only screen and (max-width: 1024px) {
+    .menu {
+        display: grid;
+        grid-template-areas: 
+        'logo logo frase burguer'
+        'itens_menu itens_menu itens_menu itens_menu';
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto;
+    }
 
+    .menu_logo {
+        grid-area: logo;
+    }
+    .menu_itens {
+        grid-area: itens_menu;
+    }
+    .frase {
+        grid-area: frase;
+    }
+    #nav {
+        display: none;
+    }
+    .nav-link {
+        text-align: center;
+    }
 
+    i#burguer {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        padding: 2px;
+        width: 20px;
+    }
+    i#burguer:hover {
+        background-color: #f7cbfa;
+    }
+    .rodape {
+        display: flex;
+        height: 25vh;
+        padding: 1rem;
+    }
+    .rodape__sobre {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+}
+@media only screen and (max-width: 735px) {
+    .menu {
+        display: grid;
+        grid-template-areas: 
+        'logo logo burguer'
+        'itens_menu itens_menu itens_menu';
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+    }
+
+    .frase {
+        display: none;
+    }
+
+    .produto-bic {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 350px;
+        width: 290px;
+        padding: 7px 7px;
+        margin: 30px 40px;
+        border: 0.5px solid rgb(133, 128, 128); 
+        background-color: #ffffffb8;
+     }
+    
+    .produto-bic img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .produto {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 350px;
+        width: 290px;
+        padding: 7px 7px;
+        margin: 30px 40px;
+        border: 0.5px solid rgb(133, 128, 128); 
+        background-color: #ffffffb8;
+    }
+    .produto img {
+        width: 180px;
+        height: 220px;
+    }
+
+    
+
+    .rodape {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #D2BBFA;
+        width: 100vw;
+        height: 70vh;
+    }
+    .rodape__sobre {
+        width: 100%;
+        align-items: center;
+        height: 30vh;
+        padding: 0.25rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .logo-rodape {
+        height: 185px;
+        width: 185px;
+    }
+    .rodape__sobre ul {
+        margin-top: 0;
+    }
+    .pagamento {
+        width: 100vw;
+        padding: 1rem;
+        height: 15vh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .pagamento img {
+        width: 40px;
+    }
+    .pagamento p {
+        width: 100vw;
+        margin-bottom: 0;
+    }
+    .redes {
+        width: 100vw;
+        padding: 1rem;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .redes p {
+        width: 100vw;
+    }  
+}
