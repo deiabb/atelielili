@@ -1,4 +1,8 @@
-/*Divisão do corpo da pag sobre*/
+body {
+    background-image: linear-gradient(40deg, rgba(253, 108, 229, 0.319), rgb(255, 255, 255),   rgba(197, 57, 253, 0.174),rgba(0, 170, 255, 0.371));
+    font-family: "Inter", sans-serif;
+}
+
 .sobre__corpo {
     display: grid;
     grid-template-columns: 100%;
@@ -37,4 +41,236 @@
 .recuo {
     text-indent: 2em;
     text-align: justify;
+}
+
+.menu {
+    display: grid;
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
+    background-color: #FDF4D6;
+    grid-template-areas: 
+    'logo itens frase';
+    grid-template-columns: 25% 40% 40%;
+    padding: 0.7rem;
+    align-items: center;
+    
+}
+.menu_logo {
+    margin-left: 1.75rem;
+    display: flex;
+    align-items: center;
+    grid-area: logo;
+}
+.logo {
+    width: 4rem;
+}
+.font-brand {
+    font-family: "Kudryashev Display Sans";
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.menu_itens {
+    margin-left: 1.75rem;
+    display: flex;
+    grid-area: itens;
+}
+
+a:link {
+    color: #716E6E;
+}
+
+a:visited {
+    color: #716E6E;
+}
+a.nav-link:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.frase {
+    margin-left: 2rem;
+    margin-right: 3rem;
+    display: flex;
+    font-family: "Halimun";
+    grid-area: frase;
+    width: fit-content;
+}
+
+i#burguer {
+    display: none;
+}
+
+.nav-link {
+    font-size: 18px;
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #D2BBFA;
+    width: 100vw;
+    height: 40vh;
+    padding: 2rem;
+}
+
+.rodape__sobre {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 30vw;
+ }
+ .rodape__sobre ul {
+    margin-top: 4rem;
+ }
+
+.logo-rodape {
+    height: 30vh;
+}
+.rodape__sobre a:hover {
+    text-decoration: none;
+    color: #000000;
+}
+.rodape__sobre a {
+    font-weight: 600;
+}
+
+.pagamento p {
+    height: 40px;
+    font-weight: 600;
+    width: 30vw;
+}
+
+.redes {
+    margin-top: 8px ;
+    font-weight: 500;
+    margin-right: 20px;
+    width: 20vw;
+}
+.redes p {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+@media only screen and (max-width: 1024px) {
+    .menu {
+        display: grid;
+        grid-template-areas: 
+        'logo logo frase burguer'
+        'itens_menu itens_menu itens_menu itens_menu';
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto;
+    }
+
+    .menu_logo {
+        grid-area: logo;
+    }
+    .menu_itens {
+        grid-area: itens_menu;
+    }
+    .frase {
+        grid-area: frase;
+    }
+
+    #nav {
+        display: none;
+    }
+    .nav-link {
+        text-align: center;
+    }
+
+    i#burguer {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        padding: 2px;
+        width: 20px;
+    }
+    i#burguer:hover {
+        background-color: #f7cbfa;
+    }
+    .rodape {
+        display: flex;
+        height: 25vh;
+        padding: 1rem;
+    }
+    .rodape__sobre {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+  }
+  @media only screen and (max-width: 735px) {
+    .menu {
+        display: grid;
+        grid-template-areas: 
+        'logo logo burguer'
+        'itens_menu itens_menu itens_menu';
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+    }
+
+    .frase {
+        display: none;
+    }
+
+    .sobre {
+        margin: 1rem 0;
+        padding: 1.25rem ;
+        width: 80vw;
+    }
+
+    .rodape {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #D2BBFA;
+        width: 100vw;
+        height: 70vh;
+    }
+    .rodape__sobre {
+        width: 100%;
+        align-items: center;
+        height: 30vh;
+        padding: 0.25rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .logo-rodape {
+        height: 185px;
+        width: 185px;
+    }
+    .rodape__sobre ul {
+        margin-top: 0;
+    }
+    .pagamento {
+        width: 100vw;
+        padding: 1rem;
+        height: 15vh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .pagamento img {
+        width: 40px;
+    }
+    .pagamento p {
+        width: 100vw;
+        margin-bottom: 0;
+    }
+    .redes {
+        width: 100vw;
+        padding: 1rem;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .redes p {
+        width: 100vw;
+    }
 }

@@ -335,9 +335,8 @@ i#burguer {
     .redes p {
         width: 100vw;
     }
-    
-    
 }
+
 @media only screen and ( max-width: 600px) {
     .destaques h2 {
         margin-bottom: 1rem;
