@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/reset.css">
-    <link rel="stylesheet" href="estilos/compra.css">
+    <link rel="stylesheet" href="../estilos/reset.css">
+    <link rel="stylesheet" href="../estilos/compra.css">
     <script src="https://kit.fontawesome.com/627fbaa77a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://db.onlinewebfonts.com/c/384a6031928e262848e4e7ef80037466?family=Kudryashev+Display+Sans" rel="stylesheet"> 
@@ -15,31 +15,33 @@
 <body class="corpo">
     
     <header class="cabecalho">
-        <nav class="navbar navbar-expand-lg fixed-top text-center">
-            <div class="navbar_logo">
-                <img src="icones/logo-pq.png" width="50" height="50" class="rounded ml-4 mr-2" alt="">
+        <nav class="menu">
+            <div class="menu_logo">
+                <img src="../icones/logo-pq.png"  class="logo rounded ml-4 mr-2" alt="">
                 <h2 class="font-brand">Ateliê Lili</h2>
             </div>
-            <ul class="nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item">
-                    <a class="nav-link " href="bichinhos.html">Bichinhos</a></li>
-                <li class="nav-item">
-                    <a class="nav-link " href="geeks.html">Geeks</a></li>
-                <li class="nav-item"><a class="nav-link " href="diversos.html">Diversos</a></li>
-            </ul>
-            <p class="font-arte ml-4 mb-0">artesanato feito com amor </p>
-            <i class="fas fa-heart"></i>
+            <div id="nav" class="menu_itens">
+                <a class="nav-link" href="../index.html">Home</a>
+                <a class="nav-link " href="bichinhos.html">Bichinhos</a>
+                <a class="nav-link " href="geeks.html">Geeks</a>
+                <a class="nav-link " href="diversos.html">Diversos</a>
+            </div>
+            <div class="frase">
+                <p class="font-arte ml-4 mb-0">artesanato feito com amor </p>
+                <i class="fa fa-heart"></i>
+            </div>
+            <i id="burguer" class="fa fa-bars burguer" onclick="funMenu()"></i>
         </nav>
     </header>
 
     <main class="compra">
         <section class="compra__fotos">
-            <img class="detalhe-bic rounded shadow-sm" src="imagens/polvo2.png" alt="">
-            <img class="detalhe-bic rounded shadow-sm" src="imagens/polvo3.png" alt="">
-            <img class="detalhe-bic rounded shadow-sm" src="imagens/polvo4.png" alt="">
-            <img class="principal-bic rounded shadow" src="imagens/polvo1.png" alt="">
+            <div class="compra__fotos__detalhe">
+                <img class="detalhe-bic rounded shadow-sm" src="../imagens/polvo2.png" alt="">
+                <img class="detalhe-bic rounded shadow-sm" src="../imagens/polvo3.png" alt="">
+                <img class="detalhe-bic rounded shadow-sm" src="../imagens/polvo4.png" alt="">
+            </div>
+            <img class="compra__fotos__principalbic rounded shadow" src="../imagens/polvo1.png" alt="">
         </section>
         <section class="compra__preco">
             <h4 class="mb-3">Polvinho azul</h4> 
@@ -59,15 +61,15 @@
     </main>
     <footer class="rodape d-lg-flex text-center justify-content-around pt-5 pb-5 pr-4">
         <div class="rodape__sobre d-flex flex-column flex-wrap justify-content-center">
-            <img class="mr-2" src="imagens/logo.png" width="180px" height="180px" alt="">
+            <img class="mr-2" src="../imagens/logo.png" width="180px" height="180px" alt="">
             <p class="mb-1"><a href="sobre.html">Sobre nós</a></p>
             <p><a href="contato.html">Contato</a></p>
         </div>
         <div class="pagamento">
             <p>Métodos de pagamento aceitos</p>
-            <img class="icn" src="icones/pix-icone.png" alt="">
-            <img class="icn" src="icones/boleto-icone.png" alt="">
-            <img class="icn" width="80px" src="icones/mercado-pago-icone.png" alt="">
+            <img class="icn" src="../icones/pix-icone.png" alt="">
+            <img class="icn" src="../icones/boleto-icone.png" alt="">
+            <img class="icn" width="80px" src="../icones/mercado-pago-icone.png" alt="">
         </div>
         <div class="redes">
             <p>Redes Sociais</p>
@@ -75,6 +77,14 @@
             <a href=""><i class="fab fa-instagram" style="font-size: 60px; color: #4c109b;"></i></a>
         </div>
     </footer>
-
+    <script>
+        function funMenu() {
+            if (nav.style.display === 'block') {
+                nav.style.display = 'none'
+            } else {
+                nav.style.display = 'block'
+            }
+        }
+    </script>
 </body>
 </html>

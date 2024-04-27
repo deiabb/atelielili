@@ -1,7 +1,7 @@
 .corpo {
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-template-rows: 18vh 125vh 25%;;
+    grid-template-rows: 18vh auto 25%;;
     grid-template-areas: 
     "topo topo topo"
     "meio meio meio"
@@ -96,12 +96,13 @@ i#burguer {
     height: 495px;
     width: 400px;
 }
-.principal-bic {
+.compra__fotos__principalbic {
     width: 70%;
 }
 
 .detalhe-bic {
     width: 10vw;
+    margin-bottom: 2rem;
 }
 .detalhe {
     width: 110px;
@@ -118,7 +119,10 @@ i#burguer {
     flex-wrap: wrap;
     justify-content: space-between;
  }
-
+ .compra__fotos__detalhe {   
+    display: flex;
+    flex-direction: column;
+}
  .compra__preco {
     margin: 1rem 1rem 0 0;
     background-color: rgb(255, 255, 255);
@@ -233,33 +237,9 @@ i#burguer {
         height: 495px;
         width: 400px;
     }
-    .principal-bic {
-        width: 70%;
-    }
-    
-    .detalhe-bic {
-        width: 12vw;
-        margin-right: 0.25rem;
-    }
-    .detalhe {
-        width: 110px;
-        height: 130px;
-    }
-   
-    .compra__fotos {
-        height: 500px;
-        padding: 1rem 0.5rem 1rem 3rem;
-        background-color: rgb(255, 255, 255);
-        grid-area: fotos;
-        margin: 0.75rem 0 0 1rem;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-     }
      .compra__preco {
         height: 500px;
-        margin: 0.75rem 1rem 0 0;
+        margin: 1rem 1rem 0 0;
         background-color: rgb(255, 255, 255);
         display: flex;
         flex-direction: column;
@@ -282,7 +262,6 @@ i#burguer {
         width: 120px;
         height: 45px;
     }
-
     .rodape {
         display: flex;
         height: 25vh;
@@ -299,7 +278,7 @@ i#burguer {
         justify-content: space-evenly;
     }
   }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 730px) {
     .menu {
         display: grid;
         grid-template-areas: 
@@ -308,46 +287,22 @@ i#burguer {
         grid-template-columns: auto auto auto;
         grid-template-rows: auto auto;
     }
-
     .frase {
         display: none;
     }
     .compra {
         grid-area: meio;
         display: grid;
-        grid-template-columns: 85vw;
-        grid-template-rows: 50vh 37vh 30vh;
+        grid-template-columns: 60vw;
+        grid-template-rows: 30vh 37vh 30vh;
         grid-template-areas: 
         "fotos"
         "preco"
         "descri";
     }
-    .principal-bic {
-       
-        grid-area: principal;
-    }
-    
-    .detalhe-bic {
-        grid-area: detalhe;
-        
-        margin-right: 0.25rem;
-    }
-    .detalhe {
-        width: 110px;
-        height: 130px;
-    }
-   
-    .compra__fotos {
+     .compra__fotos {
+        padding: 2rem;
         margin: 0;
-        height: 50vh;
-        background-color: rgb(255, 255, 255);
-        grid-area: fotos;
-        display: grid;
-        grid-template-rows: auto;
-        grid-template-columns: auto;
-        grid-template-areas: "principal" "detalhe";
-        padding: 2rem 0.5rem 1rem 0.5rem;
-        justify-items: center;
      }
      .compra__preco {
         height: 300px;
@@ -355,7 +310,7 @@ i#burguer {
         display: flex;
         flex-direction: column;
         grid-area: preco;
-        padding: 1.5rem 0.2rem 1.25rem 1.2rem;
+        padding: 1rem;
         margin: 0;
         align-items: center;
     }
@@ -377,7 +332,7 @@ i#burguer {
     .descricao {
         height: 230px;
         margin: 0;
-        padding: 1rem 0.5rem 0.5rem 1rem;
+        padding: 1rem;
         background-color: rgb(255, 255, 255);
         grid-area: descri; 
     }
@@ -437,4 +392,70 @@ i#burguer {
     .redes p {
         width: 100vw;
     }
+  }
+
+  @media only screen and (max-width: 400px) {
+
+    .compra {
+        grid-area: meio;
+        display: grid;
+        grid-template-columns: 60vw;
+        grid-template-rows: 30vh 34vh 40vh;
+        grid-template-areas: 
+        "fotos"
+        "preco"
+        "descri";
+    }
+    .compra__fotos {
+        padding: 1rem;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        align-content: center;
+        justify-content: space-around;
+    }
+    .compra__fotos__detalhe {
+        display: inline;
+        height: 5vh;
+        margin-bottom: 0;
+    }
+    .compra__fotos__principalbic {
+        width: 36vw;
+    }
+     .compra__preco {
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        grid-area: preco;
+        padding: 1rem;
+        margin: 0;
+        align-items: center;
+    }
+    .compra__preco h4 {
+        font-size: 16px;
+    }
+   
+    .compra__preco p {
+        font-size: 12px;
+    }
+    .compra_whats {
+        width: 150px;
+        height: 40px;
+        justify-self: center;
+    }
+    .descricao {
+        height: 300px;
+        margin: 0;
+        padding: 1rem;
+        background-color: rgb(255, 255, 255);
+        grid-area: descri; 
+    }
+    .descricao h4 {
+        font-size: 20px;
+    }
+    .descricao p {
+        font-size: 13px;
+    }
+    
   }

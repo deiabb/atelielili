@@ -36,12 +36,11 @@
 
     <main class="compra">
         <section class="compra__fotos">
-            <div>
+            <div class="compra__fotos__detalhe">
                 <img class="detalhe-bic rounded shadow-sm" src="../imagens/coruja2.png" alt="">
                 <img class="detalhe-bic rounded shadow-sm" src="../imagens/coruja3.png" alt="">
             </div>
-            
-            <img class="principal-bic rounded shadow" src="../imagens/coruja1.png" alt="">
+            <img class="compra__fotos__principalbic rounded shadow" src="../imagens/coruja1.png" alt="">
         </section>
         <section class="compra__preco">
             <h4 class="mb-3">Chaveiro corujinha</h4> 
@@ -84,6 +83,14 @@
             </div>
         </div>
     </footer>
-
+    <script>
+        function funMenu() {
+            if (nav.style.display === 'block') {
+                nav.style.display = 'none'
+            } else {
+                nav.style.display = 'block'
+            }
+        }
+        </script>
 </body>
 </html>
