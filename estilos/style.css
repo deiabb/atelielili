@@ -142,7 +142,7 @@ i#burguer {
 
 .destaques__foto {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 300px;
     border: 0.5px solid rgb(133, 128, 128); 
     background-color: rgb(255, 255, 255);

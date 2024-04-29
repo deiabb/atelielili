@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/627fbaa77a.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="estilos/reset.css">
-    <link rel="stylesheet" href="estilos/compra.css">
+        <link rel="stylesheet" href="../estilos/reset.css">
+    <link rel="stylesheet" href="../estilos/compra.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://db.onlinewebfonts.com/c/384a6031928e262848e4e7ef80037466?family=Kudryashev+Display+Sans" rel="stylesheet"> 
     <link href="https://db.onlinewebfonts.com/c/316ee285f7fbbf7d9b6781e4daa2a02c?family=Halimun" rel="stylesheet"> 
@@ -13,33 +13,34 @@
 </head>
 
 <body class="corpo">
-
     <header class="cabecalho">
-        <nav class="navbar navbar-expand-lg fixed-top text-center">
-            <div class="navbar_logo">
-                <img src="icones/logo-pq.png" width="50" height="50" class="rounded ml-4 mr-2" alt="">
+        <nav class="menu">
+            <div class="menu_logo">
+                <img src="../icones/logo-pq.png"  class="logo rounded ml-4 mr-2" alt="">
                 <h2 class="font-brand">Ateliê Lili</h2>
             </div>
-            <ul class="nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item">
-                    <a class="nav-link " href="bichinhos.html">Bichinhos</a></li>
-                <li class="nav-item">
-                    <a class="nav-link " href="geeks.html">Geeks</a></li>
-                <li class="nav-item"><a class="nav-link " href="diversos.html">Diversos</a></li>
-            </ul>
-            <p class="font-arte ml-4 mb-0">artesanato feito com amor </p>
-            <i class="fas fa-heart"></i>
+            <div id="nav" class="menu_itens">
+                <a class="nav-link" href="../index.html">Home</a>
+                <a class="nav-link " href="bichinhos.html">Bichinhos</a>
+                <a class="nav-link " href="geeks.html">Geeks</a>
+                <a class="nav-link " href="diversos.html">Diversos</a>
+            </div>
+            <div class="frase">
+                <p class="font-arte ml-4 mb-0">artesanato feito com amor </p>
+                <i class="fa fa-heart"></i>
+            </div>
+            <i id="burguer" class="fa fa-bars burguer" onclick="funMenu()"></i>
         </nav> 
     </header>
 
     <main class="compra">
         <section class="compra__fotos">
-            <img class="detalhe rounded shadow-sm" src="imagens/peqprinc2.jpeg" alt="">
-            <img class="detalhe rounded shadow-sm" src="imagens/pecprinc3.jpeg" alt="">
-            <img class="detalhe rounded shadow-sm" src="imagens/peqprinc4.jpeg" alt="">
-            <img class="principal rounded shadow" src="imagens/peqprinc1.jpeg" alt="">
+            <div class="compra__fotos__detalhe">
+                <img class="detalhe rounded shadow-sm" src="../imagens/peqprinc2.jpeg" alt="">
+                <img class="detalhe rounded shadow-sm" src="../imagens/pecprinc3.jpeg" alt="">
+                <img class="detalhe rounded shadow-sm" src="../imagens/peqprinc4.jpeg" alt="">
+            </div>
+            <img class="principal rounded shadow" src="../imagens/peqprinc1.jpeg" alt="">
         </section>
         <section class="compra__preco">
             <h4 class="mb-3">Boneco O Pequeno Príncipe</h4> 
@@ -49,7 +50,7 @@
             <p>Altura: 15 cm</p>
             <a href="https://web.whatsapp.com"><button class="compra_whats btn btn-success"><i class="fab fa-whatsapp" style=" font-size: 30px; font-weight: 700; margin-right: 10px;"></i>Comprar</button></a>
         </section>
-        <section class="descricao">
+        <section class="compra__descricao">
             <h4 class="mb-3">Descrição</h4>
             <p>Confeccionado com Linha 100% Algodão</p>
             <p>Enchimento com fibra siliconada anti-alérgica</p>
@@ -57,25 +58,38 @@
             <p>Produtos artesanais podem apresentar leve variação nas dimensões.</p>
         </section>
     </main>
-
-    <footer class="rodape d-lg-flex text-center justify-content-around pt-5 pb-5 pr-4">
-        <div class="rodape__sobre d-flex flex-column flex-wrap justify-content-center">
-            <img class="mr-2" src="imagens/logo.png" width="180px" height="180px" alt="">
-            <p class="mb-1"><a href="sobre.html">Sobre nós</a></p>
-            <p><a href="contato.html">Contato</a></p>
+    <footer class="rodape__index rodape text-center">
+        <div class="rodape__sobre">
+            <img class="logo-rodape" src="../imagens/logo.png" alt="desenho de um cesto com dois novelos de linha dentro e um novelo de linha do lado de fora com uma agulha transpassada no meio">
+            <ul>
+                <li><a href="sobre.html">Sobre nós</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
         </div>
         <div class="pagamento">
             <p>Métodos de pagamento aceitos</p>
-            <img class="icn" src="icones/pix-icone.png" alt="">
-            <img class="icn" src="icones/boleto-icone.png" alt="">
-            <img class="icn" width="80px" src="icones/mercado-pago-icone.png" alt="">
+            <div>
+                <img class="icn" src="../icones/pix-icone.png" alt="">
+                <img class="icn" src="../icones/boleto-icone.png" alt="">
+                <img class="icn" width="80px" src="../icones/mercado-pago-icone.png" alt="">
+            </div>
         </div>
         <div class="redes">
             <p>Redes Sociais</p>
-            <a href=""><i class="fab fa-facebook-square" style="color: #4c109b; font-size: 60px;"></i></a>
-            <a href=""><i class="fab fa-instagram" style="font-size: 60px; color: #4c109b;"></i></a>
+            <div>
+                <a href=""><i class="fab fa-facebook-square" style="color: #4c109b; font-size: 60px;"></i></a>
+                <a href=""><i class="fab fa-instagram" style="font-size: 60px; color: #4c109b;"></i></a>
+            </div>
         </div>
     </footer>
-
+    <script>
+        function funMenu() {
+            if (nav.style.display === 'block') {
+                nav.style.display = 'none'
+            } else {
+                nav.style.display = 'block'
+            }
+        }
+        </script>
 </body>
 </html>

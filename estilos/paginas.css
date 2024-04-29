@@ -6,11 +6,22 @@ body {
 .paginas {
     display: grid;
     grid-template-columns: auto auto auto ;
-    grid-template-rows: 100px 80% 200px;
+    grid-template-rows: 10vh 160vh 40vh;
     grid-template-areas: 
     "topo topo topo"
     "meio meio meio"
     "fim fim fim";
+    row-gap: 5vh;
+}
+.paginas__diver {
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    grid-template-rows: 10vh 100vh 40vh;
+    grid-template-areas: 
+    "topo topo topo"
+    "meio meio meio"
+    "fim fim fim";
+    row-gap: 5vh;
 }
 .cabecalho__topo {
     grid-area: topo;
@@ -103,6 +114,7 @@ i#burguer {
     justify-content: center;
     margin-bottom: 50px;
     padding-top: 30px;
+    align-self: center;
 }
 
 .produto {
