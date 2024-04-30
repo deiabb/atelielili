@@ -394,12 +394,21 @@ i#burguer {
   }
 
   @media only screen and (max-width: 400px) {
-
+    .corpo {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 12vh 140vh 40vh ;
+        grid-template-areas: 
+        "topo topo topo"
+        "meio meio meio"
+        "fim fim fim";
+        row-gap: 1.5rem;
+    }
     .compra {
         grid-area: meio;
         display: grid;
-        grid-template-columns: 60vw;
-        grid-template-rows: 30vh 34vh 40vh;
+        grid-template-columns: 80vw;
+        grid-template-rows: 30vh 34vh 45vh;
         grid-template-areas: 
         "fotos"
         "preco"
@@ -443,11 +452,11 @@ i#burguer {
         height: 40px;
         justify-self: center;
     }
-    .descricao {
-        height: 300px;
+    .compra__descricao {
+        height: 40vh;
         margin: 0;
         padding: 1rem;
-        background-color: rgb(255, 255, 255);
+        background-color:  rgb(255, 255, 255);
         grid-area: descri; 
     }
     .descricao h4 {

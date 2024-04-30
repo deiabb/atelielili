@@ -265,7 +265,7 @@ i#burguer {
     .paginas {
         display: grid;
         grid-template-columns: auto auto auto ;
-        grid-template-rows: 10vh 100vh 40vh;
+        grid-template-rows: 10vh 320vh 30vh;
         grid-template-areas: 
         "topo topo topo"
         "meio meio meio"
@@ -274,7 +274,7 @@ i#burguer {
     }
     .rodape {
         display: flex;
-        height: 25vh;
+        height: 30vh;
         padding: 1rem;
     }
     .rodape__sobre {
