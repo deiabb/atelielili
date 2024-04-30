@@ -6,7 +6,17 @@ body {
 .paginas {
     display: grid;
     grid-template-columns: auto auto auto ;
-    grid-template-rows: 10vh 160vh 40vh;
+    grid-template-rows: 12vh 170vh 40vh;
+    grid-template-areas: 
+    "topo topo topo"
+    "meio meio meio"
+    "fim fim fim";
+    row-gap: 5vh;
+}
+.paginas__geeks {
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    grid-template-rows: 12vh 190vh 40vh;
     grid-template-areas: 
     "topo topo topo"
     "meio meio meio"
@@ -16,7 +26,7 @@ body {
 .paginas__diver {
     display: grid;
     grid-template-columns: auto auto auto ;
-    grid-template-rows: 10vh 100vh 40vh;
+    grid-template-rows: 10vh 90vh 40vh;
     grid-template-areas: 
     "topo topo topo"
     "meio meio meio"
@@ -252,6 +262,16 @@ i#burguer {
     i#burguer:hover {
         background-color: #f7cbfa;
     }
+    .paginas {
+        display: grid;
+        grid-template-columns: auto auto auto ;
+        grid-template-rows: 10vh 100vh 40vh;
+        grid-template-areas: 
+        "topo topo topo"
+        "meio meio meio"
+        "fim fim fim";
+        row-gap: 5vh;
+    }
     .rodape {
         display: flex;
         height: 25vh;
@@ -277,6 +297,26 @@ i#burguer {
 
     .frase {
         display: none;
+    }
+
+    .cabecalho__topo {
+        grid-area: topo;
+    }
+    .produtos {
+        grid-area: meio;
+    }
+    .rodape {
+        grid-area: fim;
+    }
+    .paginas {
+        display: grid;
+        grid-template-columns: auto auto auto ;
+        grid-template-rows: 10vh 185vh 40vh;
+        grid-template-areas: 
+        "topo topo topo"
+        "meio meio meio"
+        "fim fim fim";
+        row-gap: 5vh;
     }
 
     .produto-bic {
@@ -313,8 +353,6 @@ i#burguer {
         width: 180px;
         height: 220px;
     }
-
-    
 
     .rodape {
         display: flex;

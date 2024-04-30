@@ -28,15 +28,16 @@ body {
     "loca-index loca-index loca-index"
     "fim-index fim-index fim-index"
     ;
-    row-gap: 1.25rem;
+    row-gap: 0.25rem;
 }
 
 .carrosel {
-    margin-top: 2.75rem;
+    margin-top: 2.5rem;
     
 }
 .carrosel img {
     width: 100vw;
+    height: 68vh;
 }
 
 .cabecalho__logo {
@@ -272,6 +273,7 @@ i#burguer {
   }
 
 @media only screen and (max-width: 735px) {
+
     .menu {
         display: grid;
         grid-template-areas: 
@@ -283,6 +285,9 @@ i#burguer {
 
     .frase {
         display: none;
+    }
+    .carrosel img {
+        height: 30vh;
     }
 
     .rodape {
@@ -338,6 +343,9 @@ i#burguer {
 }
 
 @media only screen and ( max-width: 600px) {
+    .carrosel img {
+        height: 26vh;
+    }
     .destaques h2 {
         margin-bottom: 1rem;
         width: 100%;
@@ -347,7 +355,7 @@ i#burguer {
     
     .destaques__foto {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         width: 270px;
         border: 0.5px solid rgb(133, 128, 128); 
         background-color: rgb(255, 255, 255);
