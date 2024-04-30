@@ -92,7 +92,7 @@ i#burguer {
 .nav-link {
     font-size: 18px;
 }
-.principal {
+.compra__principal {
     width: 23vw;
 }
 .compra__fotos__principalbic {
@@ -117,7 +117,16 @@ i#burguer {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: ;
+ }
+ .compra__fotos__geeks {
+    padding: 2rem 0 1rem 2.5rem;
+    background-color: rgb(255, 255, 255);
+    grid-area: fotos;
+    margin: 1rem 0 0 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
  }
  .compra__fotos__detalhe {   
     display: flex;
@@ -232,7 +241,7 @@ i#burguer {
     i#burguer:hover {
         background-color: #f7cbfa;
     }
-    .principal {
+    .compra__principal {
         height: 495px;
         width: 400px;
     }
@@ -423,13 +432,26 @@ i#burguer {
         align-content: center;
         justify-content: space-around;
     }
+    .compra__fotos__geeks {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 1rem;
+        align-content: center;
+    }
     .compra__fotos__detalhe {
         display: inline;
-        height: 5vh;
+        height: 6vh;
         margin-bottom: 0;
+        align-self: center;
     }
     .compra__fotos__principalbic {
         width: 36vw;
+    }
+    .compra__principal {
+        width: 28vw;
+        height: 19vh;
     }
      .compra__preco {
         background-color: rgb(255, 255, 255);
