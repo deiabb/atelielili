@@ -12,6 +12,7 @@ body {
     "meio"
     "fim";
     row-gap: 2rem;
+    align-content: center;
 }
 
 .sobre__cabecalho {

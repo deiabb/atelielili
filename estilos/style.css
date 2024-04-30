@@ -261,7 +261,7 @@ i#burguer {
     }
     .rodape {
         display: flex;
-        height: 25vh;
+        height: 30vh;
         padding: 1rem;
     }
     .rodape__sobre {
